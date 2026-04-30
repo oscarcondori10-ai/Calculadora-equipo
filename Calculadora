@@ -1,0 +1,23 @@
+package calculadora;
+import java.util.Scanner;
+
+public class Calculadora {
+    public static double sumar(double a, double b) { return a + b; }
+    public static double restar(double a, double b) { return a - b; }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce 2 números:");
+        double num1 = scanner.nextDouble();
+        double num2 = scanner.nextDouble();
+        System.out.println("1-Suma, 2-Resta");
+        int opcion = scanner.nextInt();
+
+        switch (opcion) {
+            case 1: System.out.println("*** A - SUMA *** " + sumar(num1, num2)); break;
+            case 2: System.out.println("*** A - RESTA *** " + restar(num1, num2)); break;
+            default: System.out.println("Opción no válida");
+        }
+        scanner.close();
+    }
+}
